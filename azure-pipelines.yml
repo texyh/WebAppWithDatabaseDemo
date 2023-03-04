@@ -16,6 +16,10 @@ steps:
     projects: '**/*.csproj'
     feedsToUse: 'select'
 
+- task: WhiteSource@21
+  inputs:
+    cwd: '$(System.DefaultWorkingDirectory)'
+
 - task: DotNetCoreCLI@2
   displayName: Build
   inputs:
